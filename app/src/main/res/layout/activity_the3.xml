@@ -47,6 +47,7 @@
 
     <Button
         android:id="@+id/rull"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="233dp"
         android:layout_height="51dp"
         android:layout_marginBottom="8dp"

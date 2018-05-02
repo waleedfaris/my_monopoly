@@ -22,25 +22,11 @@ public class Player {
     private int location ;
     private String chracter;
 
-
-    public Player(String N, int I,int money )
-    {
-
-        this.playername=N;
-        this.id=I;
-        this.Money=money;
-        this.Cards=new ArrayList<card>();
-        this.Companys=new ArrayList<Company> ();
-        this.SavedCard=new ArrayList<Surprise>();
-        this.boot=0;
-        this.location=0 ;
-    }
     public Player(int Id)
     {
-        chracter = "hat";
-        this.id=Id;
+        SetID (Id);
         this.playername=null;
-        this.Money=0000;
+        this.Money=2000000;
         this.location=0;
     }
 
@@ -48,7 +34,6 @@ public class Player {
     {
         this.Money=this.Money+money;
     }
-
 
     public String GetN()
     {
@@ -66,6 +51,11 @@ public class Player {
     }
 
     public int GetMoney() {return this.Money;}
+
+    public void SetID(int id)
+    {
+        this.id=id;
+    }
 
     public ArrayList<card> GetCards()
     {

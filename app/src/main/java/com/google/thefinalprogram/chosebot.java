@@ -202,8 +202,6 @@ public class chosebot extends AppCompatActivity {
 
     }// end on creat
 
-
-
     private void swapVispilty(Button aa)
     {
         if(aa.VISIBLE==0)

@@ -24,22 +24,29 @@ import java.util.Random;
 import java.util.Stack;
 
 public class TheBoardActivity extends AppCompatActivity {
+    //////
     public static List<Player> players = chosebot.players;
     private int Index;
     private Button[] BordButtons;
     private ImageView[] BordBoots;
     private int helpINbuttons=0;
+
     @Override
+    ////////////
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_the_board);
         getSupportActionBar ().hide ();
         Index = -1;// אסור לשחק בו
 
+        /* This function update id's */
+        ///////////
+        ChandeIDs ();
+        ///////////
+
         final Button Dice = (Button) findViewById (R.id.dice);
-
         final Player[] CurrentPlayer = {MakeTurn ()};
-
         ChangeData (CurrentPlayer[0]);
 
         Dice.setOnClickListener (new View.OnClickListener () {
@@ -52,28 +59,17 @@ public class TheBoardActivity extends AppCompatActivity {
             }
         });
 
-        final ImageView Imagee=(ImageView) findViewById (R.id.cardImageView);
-
-       /*x.setOnClickListener (new View.OnClickListener () {
-            @Override
-            public void onClick(View view) {
-                if(helpINbuttons==0) {
-                    Imagee.setVisibility (View.VISIBLE);
-                    Imagee.setBackground (getDrawable (CountryImage));
-                    helpINbuttons=1;
-                }else
-                {
-                    Imagee.setVisibility (View.INVISIBLE);
-                    helpINbuttons=0;
-                }
-            }
-        });*/
-
-
     }// end  oncreate function
 
     //public void GiveEachOneA
 
+    public  void ChandeIDs ()
+    {
+        for(int i=0;i<players.size();i++)
+        {
+            players.get (i).SetID (i+9568240);
+        }
+    }
 
     public void FillButtons()
     {
@@ -120,8 +116,6 @@ public class TheBoardActivity extends AppCompatActivity {
         BordButtons[39]=findViewById(R.id.b31);
     }// End function
 
-
-
     public ArrayList<Integer> images()
     {
         ArrayList<Integer> images=new ArrayList<>();
@@ -153,24 +147,27 @@ public class TheBoardActivity extends AppCompatActivity {
     }// end function make masgee that return number of moves at masgee and update the location method
     // at every player
 
-    public void ChangeData(Player aa  )
+    public void ChangeData(Player aa)
     {
-         TextView playername;
+        String st;
+        TextView playername;
         TextView playermoney;
-         ImageView playerboot;
+        TextView PlayerID;
+        ImageView playerboot;
         playername=(TextView) findViewById (R.id.playername);
         playermoney=(TextView) findViewById (R.id.playermoney);
+        PlayerID=(TextView) findViewById (R.id.PlayerID);
         playerboot=(ImageView) findViewById (R.id.playerboot);
         playername.setText (aa.GetN ());
-        String st = "" + aa.GetMoney ()+"M $";
+        st = "ID:"+aa.GetID ();
+        PlayerID.setText (st);
+        st = "" + aa.GetMoney ()+"M $";
         playermoney.setText (st);
         playerboot.setImageDrawable (getDrawable (aa.GetBoot ()));
         Button Dice = (Button) findViewById (R.id.dice);
          Dice.setVisibility (View.VISIBLE);
 
     }// end function ChangeData that changes the data for every player
-
-
 
     private Player MakeTurn()
     {
@@ -187,8 +184,6 @@ public class TheBoardActivity extends AppCompatActivity {
 
     }// this function return the player according to the tor
 
-
-
     private void SetLocation (Player aa )
     {
         //getDrawable (aa.GetBoot ()).setLayoutDirection (BordButtons[aa.GetLocation ()].getLayoutDirection ());
@@ -201,9 +196,6 @@ public class TheBoardActivity extends AppCompatActivity {
         getDrawable (aa.GetBoot ()).setBounds (left,x,right,y);
         //getDrawable (aa.GetBoot ()).
     }// end function SetLocation that update the location of the player at the bord
-
-
-
 
    /* private void SetHideBoots()
     {

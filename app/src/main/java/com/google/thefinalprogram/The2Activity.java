@@ -56,58 +56,55 @@ public class The2Activity extends AppCompatActivity {
 
 
         circleMenu.setOnMenuSelectedListener(new OnMenuSelectedListener () {
-
-                                                 @Override
-                                                 public void onMenuSelected(int index) {
-                                                     switch (index) {
-                                                         case 0:
-                                                             if(ISIN (0)){
-                                                                    MakeMasgee (0).show ();
-
-                                                             }
-                                                             else{
-                                                                 Toast.makeText(The2Activity.this, R.string.enterd_name, Toast.LENGTH_SHORT).show();
-                                                             }
-                                                             break;
-                                                         case 1:
-                                                             if(ISIN (1)){
-                                                                 MakeMasgee (1).show ();}
-                                                             else{
-                                                                 Toast.makeText(The2Activity.this, R.string.enterd_name, Toast.LENGTH_SHORT).show();
-                                                             }
-                                                             break;
-                                                         case 2:
-                                                             if(ISIN (2)){
-                                                                 MakeMasgee (2).show ();}
-                                                             else{
-                                                                 Toast.makeText(The2Activity.this, R.string.enterd_name, Toast.LENGTH_SHORT).show();
-                                                             }
-                                                             break;
-                                                         case 3:
-                                                             if(ISIN (3)){
-                                                                 MakeMasgee (3).show ();}
-                                                             else{
-                                                                 Toast.makeText(The2Activity.this, R.string.enterd_name, Toast.LENGTH_SHORT).show();
-                                                             }
-                                                             break;
-                                                         case 4:
-                                                             if(ISIN (4)){
-                                                                 MakeMasgee (4).show ();}
-                                                             else{
-                                                                 Toast.makeText(The2Activity.this, R.string.enterd_name, Toast.LENGTH_SHORT).show();
-                                                             }
-                                                             break;
-                                                         case 5:
-                                                             if(ISIN (5)){
-                                                                 MakeMasgee (5).show ();}
-                                                             else{
-                                                                 Toast.makeText(The2Activity.this, R.string.enterd_name, Toast.LENGTH_SHORT).show();
-                                                             }
-                                                             break;
-                                                     }// end switch
-                                                 }
-                                             }
-
+            @Override
+            public void onMenuSelected(int index) {
+                switch (index) {
+                    case 0:
+                        if(ISIN (0)){
+                            MakeMasgee (0).show ();
+                        }
+                        else{
+                            Toast.makeText(The2Activity.this, R.string.enterd_name, Toast.LENGTH_SHORT).show();
+                        }
+                        break;
+                    case 1:
+                        if(ISIN (1)){
+                            MakeMasgee (1).show ();}
+                        else{
+                            Toast.makeText(The2Activity.this, R.string.enterd_name, Toast.LENGTH_SHORT).show();
+                        }
+                        break;
+                    case 2:
+                        if(ISIN (2)){
+                            MakeMasgee (2).show ();}
+                        else{
+                            Toast.makeText(The2Activity.this, R.string.enterd_name, Toast.LENGTH_SHORT).show();
+                        }
+                        break;
+                    case 3:
+                        if(ISIN (3)){
+                            MakeMasgee (3).show ();}
+                        else{
+                            Toast.makeText(The2Activity.this, R.string.enterd_name, Toast.LENGTH_SHORT).show();
+                        }
+                        break;
+                    case 4:
+                        if(ISIN (4)){
+                            MakeMasgee (4).show ();}
+                        else{
+                            Toast.makeText(The2Activity.this, R.string.enterd_name, Toast.LENGTH_SHORT).show();
+                        }
+                        break;
+                    case 5:
+                        if(ISIN (5)){
+                            MakeMasgee (5).show ();}
+                        else{
+                            Toast.makeText(The2Activity.this, R.string.enterd_name, Toast.LENGTH_SHORT).show();
+                        }
+                        break;
+                }// end switch
+            }
+        }
         );// end circle menu click listnier
 
 
@@ -131,25 +128,7 @@ public class The2Activity extends AppCompatActivity {
             }
         });
 
-
-
-        findViewById (R.id.button).setOnClickListener (new View.OnClickListener () {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder aa=new AlertDialog.Builder (The2Activity.this);
-                makefinalstacck ();
-                aa.setMessage (allnames ());
-                aa.create ();
-                aa.show ();
-            }
-        });
-
-
-
-
     }// end main
-
-
 
 
     @Override

@@ -64,13 +64,13 @@ public final class R {
         public static final int notify_panel_notification_icon_bg = 0x7f06007c;
     }
     public static final class id {
-        public static final int action_container = 0x7f07000f;
-        public static final int action_divider = 0x7f070011;
-        public static final int action_image = 0x7f070012;
-        public static final int action_text = 0x7f070018;
-        public static final int actions = 0x7f070019;
-        public static final int async = 0x7f07001f;
-        public static final int blocking = 0x7f07004a;
+        public static final int action_container = 0x7f070010;
+        public static final int action_divider = 0x7f070012;
+        public static final int action_image = 0x7f070013;
+        public static final int action_text = 0x7f070019;
+        public static final int actions = 0x7f07001a;
+        public static final int async = 0x7f070020;
+        public static final int blocking = 0x7f07004b;
         public static final int chronometer = 0x7f070052;
         public static final int forever = 0x7f070062;
         public static final int icon = 0x7f070066;

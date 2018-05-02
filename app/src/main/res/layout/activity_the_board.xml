@@ -595,7 +595,7 @@
             <Button
                 android:id="@+id/b30"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.9" />
 
@@ -706,50 +706,69 @@
 
     <TextView
         android:id="@+id/playername"
-        android:layout_width="128dp"
-        android:layout_height="36dp"
+        android:layout_width="102dp"
+        android:layout_height="32dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
         android:text=""
         android:textColor="#198C19"
-        android:textSize="25dp"
-        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playerboot"
         app:layout_constraintTop_toBottomOf="@+id/Board"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.034" />
 
     <TextView
         android:id="@+id/playermoney"
-        android:layout_width="128dp"
-        android:layout_height="36dp"
+        android:layout_width="271dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:text=""
         android:textColor="#198C19"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playerboot"
+        app:layout_constraintBottom_toBottomOf="@+id/cardImageView"
+        app:layout_constraintEnd_toStartOf="@+id/PlayerID"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toEndOf="@+id/playerboot"
+        app:layout_constraintTop_toBottomOf="@+id/playername"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/playerboot"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="79dp"
+        android:layout_height="72dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playername"
+        app:layout_constraintTop_toBottomOf="@+id/Board"
         app:srcCompat="@drawable/monopoly" />
+
+    <TextView
+        android:id="@+id/PlayerID"
+        android:layout_width="156dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#198C19"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/playermoney"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toEndOf="@+id/playername"
+        app:layout_constraintTop_toBottomOf="@+id/Board"
+        app:layout_constraintVertical_bias="0.8" />
+
     <!--
 
     <ImageView

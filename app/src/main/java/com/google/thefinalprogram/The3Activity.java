@@ -88,9 +88,6 @@ public class The3Activity extends AppCompatActivity {
 
     }// end the main function
 
-
-
-
     private void SetImage(int i )
     {
         ImageView thepic = (ImageView) findViewById (R.id.thepic);
@@ -147,9 +144,6 @@ public class The3Activity extends AppCompatActivity {
         }
         return aa.remove (maxindex);
     }
-
-
-
 
     private void makinglist()
     {
